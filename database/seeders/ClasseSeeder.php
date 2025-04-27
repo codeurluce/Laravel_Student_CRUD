@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Classe;
 
 class ClasseSeeder extends Seeder
 {
@@ -12,6 +13,8 @@ class ClasseSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $classe = new Classe();
+        $classe->libelle = "Licence 3";
+        $classe->save();
     }
 }

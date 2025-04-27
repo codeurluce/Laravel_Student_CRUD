@@ -11,7 +11,7 @@ class Classe extends Model
     use HasFactory;
 
     protected $fillable = ['libelle'];
-    public function etudiants():HasMany{
+    public function etudiant():HasMany{
         return $this->hasMany(Etudiant::class);
     }
 }
