@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Contact</h1>
+    
     <x-menu />
 
 </body>

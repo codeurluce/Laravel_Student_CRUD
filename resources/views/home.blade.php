@@ -6,8 +6,9 @@
     <title>Laravel application</title>
 </head>
 <body>
-    <h1>Bienvenue sur notre application {{ $app_name }}</h1>
-    <x-menu />
+    <h1>Bienvenue sur la page d'acceuil</h1>
+    <p>Bonjour {{ $user->name }}</p>
 
+    <x-menu />
 </body>
 </html>

@@ -1,7 +1,7 @@
 <nav>
     <ul>
-        <li><a href="{{ route('home') }}">Home</a></li>
-        <li><a href="{{ route('about') }}">About us</a></li>
-        <li><a href="{{ route('contact') }}">Contact</a></li>
+        <li><a href="{{ route ('home') }}">Accueil</a></li>
+        <li><a href="{{ route ('shop') }}">Boutique</a></li>
+        <li><a href="{{ route ('contact') }}">Nous contacter</a></li>
     </ul>
 </nav>
