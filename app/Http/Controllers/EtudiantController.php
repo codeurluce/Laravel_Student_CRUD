@@ -14,4 +14,9 @@ class EtudiantController extends Controller
             'etudiants' => $etudiants,
         ]);
     }
+
+    //Afficher le formulaire d'ajout d'un etudiant
+    public function add(){
+        return view('etudiant.add');
+    }
 }

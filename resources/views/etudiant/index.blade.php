@@ -13,7 +13,7 @@
                 <h1>CRUD Etudiant en laravel</h1>
             </div>
             <div class="col mt-2">
-                <a href="#" class="btn btn-primary">Ajouter un étudiant</a>
+                <a href="{{ route('etudiant.add') }}" class="btn btn-primary">Ajouter un étudiant</a>
             </div>
         </div>
         <div class="row mt-3">
