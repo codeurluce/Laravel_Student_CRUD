@@ -67,5 +67,12 @@ class EtudiantController extends Controller
 
     return back()->with('success', 'Etudiant modifié avec succès');
 }
+
+    //Supprimer un etudiant
+    public function delete($id){
+        $etudiant = Etudiant::findOrFail($id);
+        $etudiant->delete();
+        return back()->with('success', 'Etudiant supprimé avec succès');
+    }
 }
 

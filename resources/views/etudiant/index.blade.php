@@ -19,10 +19,14 @@
         <div class="row mt-3">
             <div class="col">
                 <h2>Liste des étudiants</h2>
+                @if (session('success'))
+                    <div class="alert alert-danger">
+                        {{ session('success') }}
+                    </div>
+                @endif
         <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">Nom</th>
       <th scope="col">Prenom</th>
       <th scope="col">Classe</th>
@@ -33,13 +37,12 @@
 
   @foreach ($etudiants as $item)
   <tr>
-      <th scope="row">{{ $item->id }}</th>
       <td>{{$item->nom}}</td>
       <td>{{$item->prenom}}</td>
       <td>{{$item->classe->libelle}}</td>
       <td>
         <a href="{{ route('etudiant.show', $item->id) }}" class="btn btn-primary">Modifier</a>
-        <a href="#" class="btn btn-danger">Supprimer</a>
+        <a href="{{ route('etudiant.delete', $item->id) }}" class="btn btn-danger">Supprimer</a>
         </td>
 
     </tr>
