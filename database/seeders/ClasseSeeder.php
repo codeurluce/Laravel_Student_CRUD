@@ -12,9 +12,19 @@ class ClasseSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void
-    {
+{
+    $classes = [
+        'Licence 1',
+        'Licence 2',
+        'Licence 3',
+        'Master 1',
+        'Master 2',
+    ];
+
+    foreach ($classes as $libelle) {
         $classe = new Classe();
-        $classe->libelle = "Licence 3";
+        $classe->libelle = $libelle;
         $classe->save();
     }
+}
 }

@@ -23,4 +23,22 @@ class EtudiantController extends Controller
             'classes' => $classes
         ]);
     }
+
+    //Traiter le formulaire d'ajout d'un etudiant
+    public function store(Request $request){
+        $request->validate([
+            'nom' => 'required',
+            'prenom' => 'required',
+            'classe_id' => 'required|exists:classes,id'
+        ]);
+
+        $etudiant = new Etudiant();
+        $etudiant->nom = $request->input('nom');
+        $etudiant->prenom = $request->input('prenom');
+        $etudiant->classe_id = $request->input('classe_id');
+        $etudiant->save();
+
+        return back()->with('success', 'Etudiant ajouté avec succès');
+        // return redirect()->route('etudiant.index')->with('success', 'Etudiant ajouté avec succès');
+    }
 }

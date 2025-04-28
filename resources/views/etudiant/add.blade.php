@@ -19,23 +19,31 @@
             <div class="col">
             <h2>formulaire d'inscription</h2>
 
-            <form action="" method="post">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            
+            @endif
+
+            <form action="{{ route('etudiant.store') }}" method="post">
+                @csrf
                 <div class="row">
                     <div class="mb-3">
                         <label for="nom" class="form-label">Nom</label>
-                        <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom">
+                        <input type="text" class="form-control" name="nom" id="nom" placeholder="Entrez votre nom">
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3">
                         <label for="prenom" class="form-label">Prenom</label>
-                        <input type="text" class="form-control" id="prenom" placeholder="Entrez votre prenom">
+                        <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Entrez votre prenom">
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3">
                         <label for="classe" class="form-label">Classe</label>
-                        <select id="classe" class="form-control">
+                        <select id="classe" name="classe_id" class="form-control">
                             <option value="">Choisir votre classe</option>
                             @foreach ($classes as $item)
                                 <option value="{{ $item->id }}">{{ $item->libelle }}</option>

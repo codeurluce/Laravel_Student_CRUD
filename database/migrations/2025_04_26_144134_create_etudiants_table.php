@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nom');
             $table->string('prenom')->nullable();
-            $table->timestamps();
             $table->foreignId('classe_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->timestamps();
 
         });
     }

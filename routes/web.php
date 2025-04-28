@@ -24,3 +24,5 @@ Route::get('/contact' ,[PagesController::class, 'contact'])->name('contact');
 //Etudiant
 Route::get('/etudiant/all', [EtudiantController::class, 'index'])->name('etudiant.index');
 Route::get('/etudiant/add', [EtudiantController::class, 'add'])->name('etudiant.add');
+Route::post('/etudiant/store', [EtudiantController::class, 'store'])->name('etudiant.store');
+
