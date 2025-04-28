@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('etudiants', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');
+            $table->string('prenom')->nullable();
             $table->timestamps();
+            $table->foreignId('classe_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+
         });
     }
 
