@@ -41,4 +41,31 @@ class EtudiantController extends Controller
         return back()->with('success', 'Etudiant ajouté avec succès');
         // return redirect()->route('etudiant.index')->with('success', 'Etudiant ajouté avec succès');
     }
+
+    //Afficher le formulaire de modification d'un etudiant
+    public function show($id){
+        $etudiant = Etudiant::findOrFail($id);
+        $classes = Classe::all();
+        return view('etudiant.show', [
+            'etudiant' => $etudiant,
+            'classes' => $classes
+        ]);
+    }
+
+    //traiter le formulaire de modification d'un etudiant
+    public function update(Request $request){
+        $request->validate([
+            'nom' => 'required',
+            'prenom' => 'required',
+        ]);
+        // $etudiant = Etudiant::find($id);
+        $etudiant = Etudiant::findOrFail($request->id);
+        $etudiant->nom = $request->nom;
+        $etudiant->prenom = $request->prenom;
+        $etudiant->classe_id = $request->classe_id;
+        $etudiant->update();
+
+    return back()->with('success', 'Etudiant modifié avec succès');
 }
+}
+

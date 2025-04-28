@@ -25,4 +25,6 @@ Route::get('/contact' ,[PagesController::class, 'contact'])->name('contact');
 Route::get('/etudiant/all', [EtudiantController::class, 'index'])->name('etudiant.index');
 Route::get('/etudiant/add', [EtudiantController::class, 'add'])->name('etudiant.add');
 Route::post('/etudiant/store', [EtudiantController::class, 'store'])->name('etudiant.store');
-
+Route::post('/etudiant/update', [EtudiantController::class, 'update'])->name('etudiant.edit');
+Route::get('/etudiant/{id}', [EtudiantController::class, 'show'])->name('etudiant.show');
+Route::get('/etudiant/delete/{id}', [EtudiantController::class, 'delete'])->name('etudiant.delete');
