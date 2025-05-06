@@ -4,6 +4,11 @@ Une petite application Laravel permettant de gérer des étudiants avec les opé
 L'interface utilisateur est conçue avec **Bootstrap** pour un design simple, propre et responsive.
 
 ---
+## 📸 Aperçu
+
+![Aperçu du site]('student_crud.png') 
+
+---
 
 ## 🚀 Fonctionnalités
 
@@ -26,5 +31,5 @@ L'interface utilisateur est conçue avec **Bootstrap** pour un design simple, pr
 ## ⚙️ Installation
 
 1. **Cloner ce dépôt :**
-- git clone https://github.com/codeurluce/Laravel_app.git
+- git clone https://github.com/codeurluce/Laravel_Student_CRUD
 - cd Laravel_app
