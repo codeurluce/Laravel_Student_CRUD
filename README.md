@@ -6,7 +6,7 @@ L'interface utilisateur est conçue avec **Bootstrap** pour un design simple, pr
 ---
 ## 📸 Aperçu
 
-![Aperçu du site]('student_crud.png') 
+![Aperçu du site](student_crud.png) 
 
 ---
 
